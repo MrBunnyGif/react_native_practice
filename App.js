@@ -1,30 +1,58 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import {
+  StyleSheet,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  TouchableHighlight,
+  SafeAreaView,
+  TouchableNativeFeedback,
+  Text,
+  View,
+  Image,
+  Button
+} from 'react-native';
 
 export default function App() {
-  console.log(require('./assets/favicon.png'))
   return (
-    <View style={styles.container}>
-      <Text style={stylesText.container}>Hello world!</Text>
-      <Image source={{
-        width: 200,
-        height: 300,
-        uri: 'https://picsum.photos/200/300',
-      }}
-        // blurRadius={10}
-        fadeDuration={1000}
-      />
+    <SafeAreaView style={styles.container}>
+      <Button color="tomato" title='click me' onPress={() => alert('hello world :)')} />
+      {/* <Text style={stylesText.container}>Hello world!</Text> */}
+      {/* <TouchableWithoutFeedback onPress={() => console.log('teste')}> */}
+      {/* <TouchableOpacity> */}
+      {/* <TouchableNativeFeedback >
+        <View style={{ width: 100, height: 50, backgroundColor: 'dodgerblue' }} />
+      </TouchableNativeFeedback> */}
+      {/* <TouchableHighlight onPress={() => console.log('oi')}>
+        <Image source={{
+          width: 200,
+          height: 300,
+          uri: 'https://picsum.photos/200/300',
+        }}
+          // blurRadius={10}
+          fadeDuration={1000}
+        />
+      </TouchableHighlight> */}
+      {/* </TouchableOpacity> */}
+      {/* </TouchableWithoutFeedback> */}
       {/* <StatusBar style="auto" /> */}
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#333',
+    backgroundColor: '#eee',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+});
+
+const viewStyles = StyleSheet.create({
+  container: {
+    backgroundColor: 'dodgerblue',
+    height: '100px',
+    width: '200px'
   },
 });
 
