@@ -9,13 +9,22 @@ import {
   Text,
   View,
   Image,
-  Button
+  Button,
+  Alert
 } from 'react-native';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Button color="tomato" title='click me' onPress={() => alert('hello world :)')} />
+      {/* <Button
+        color="tomato"
+        title='click me'
+        onPress={() => Alert.prompt('Título', 'Mensagem', text => console.log(text))}
+      onPress={() => Alert.alert('Título', 'Mensagem', [
+        { text: 'Yes', onPress: () => alert(':)') },
+        { text: 'No', onPress: () => alert(':(') },
+      ])}
+      /> */}
       {/* <Text style={stylesText.container}>Hello world!</Text> */}
       {/* <TouchableWithoutFeedback onPress={() => console.log('teste')}> */}
       {/* <TouchableOpacity> */}
