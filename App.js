@@ -15,12 +15,15 @@ import {
   StatusBar,
   Dimensions
 } from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 
 export default function App() {
-  console.log(Dimensions.get('window'))
+  console.log(useDimensions())
+  console.log(useDeviceOrientation())
+  const { landscape } = useDeviceOrientation()
 
   return (
-    <View style={{ backgroundColor: '#333', width: '100%', height: '70%' }}>
+    <View style={{ backgroundColor: '#333', width: '100%', height: landscape ? '100%' : '30%' }}>
       <Text style={{ color: 'white', padding: 16 }}>oi</Text>
       <StatusBar style="auto" />
     </View>
