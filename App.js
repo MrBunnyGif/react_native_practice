@@ -12,42 +12,52 @@ import {
   Button,
   Alert,
   Platform,
-  StatusBar
+  StatusBar,
+  Dimensions
 } from 'react-native';
 
 export default function App() {
+  console.log(Dimensions.get('window'))
+
   return (
-    <SafeAreaView style={[styles.container, viewStyles.container]}>
-      <Button
-        color="dodgerblue"
-        title='click me'
-        // onPress={() => Alert.prompt('Título', 'Mensagem', text => console.log(text))}
-        onPress={() => Alert.alert('Título', 'Mensagem', [
-          { text: 'Yes', onPress: () => alert(':)') },
-          { text: 'No', onPress: () => alert(':(') },
-        ])}
-      />
-      {/* <Text style={stylesText.container}>Hello world!</Text> */}
-      {/* <TouchableWithoutFeedback onPress={() => console.log('teste')}> */}
-      {/* <TouchableOpacity> */}
-      {/* <TouchableNativeFeedback >
-        <View style={{ width: 100, height: 50, backgroundColor: 'dodgerblue' }} />
-      </TouchableNativeFeedback> */}
-      {/* <TouchableHighlight onPress={() => console.log('oi')}>
-        <Image source={{
-          width: 200,
-          height: 300,
-          uri: 'https://picsum.photos/200/300',
-        }}
-          // blurRadius={10}
-          fadeDuration={1000}
-        />
-      </TouchableHighlight> */}
-      {/* </TouchableOpacity> */}
-      {/* </TouchableWithoutFeedback> */}
-      {/* <StatusBar style="auto" /> */}
-    </SafeAreaView>
-  );
+    <View style={{ backgroundColor: '#333', width: '33.3%', height: 70 }}>
+      <Text style={{ color: 'white', padding: 16 }}>oi</Text>
+      <StatusBar style="auto" />
+    </View>
+  )
+
+  // return (
+  //   <SafeAreaView style={[styles.container, viewStyles.container]}>
+  //     <Button
+  //       color="dodgerblue"
+  //       title='click me'
+  //       // onPress={() => Alert.prompt('Título', 'Mensagem', text => console.log(text))}
+  //       onPress={() => Alert.alert('Título', 'Mensagem', [
+  //         { text: 'Yes', onPress: () => alert(':)') },
+  //         { text: 'No', onPress: () => alert(':(') },
+  //       ])}
+  //     />
+  //     {/* <Text style={stylesText.container}>Hello world!</Text> */}
+  //     {/* <TouchableWithoutFeedback onPress={() => console.log('teste')}> */}
+  //     {/* <TouchableOpacity> */}
+  //     {/* <TouchableNativeFeedback >
+  //       <View style={{ width: 100, height: 50, backgroundColor: 'dodgerblue' }} />
+  //     </TouchableNativeFeedback> */}
+  //     {/* <TouchableHighlight onPress={() => console.log('oi')}>
+  //       <Image source={{
+  //         width: 200,
+  //         height: 300,
+  //         uri: 'https://picsum.photos/200/300',
+  //       }}
+  //         // blurRadius={10}
+  //         fadeDuration={1000}
+  //       />
+  //     </TouchableHighlight> */}
+  //     {/* </TouchableOpacity> */}
+  //     {/* </TouchableWithoutFeedback> */}
+  //     {/* <StatusBar style="auto" /> */}
+  //   </SafeAreaView>
+  // );
 }
 
 const styles = StyleSheet.create({
