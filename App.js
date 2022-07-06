@@ -20,7 +20,7 @@ export default function App() {
   console.log(Dimensions.get('window'))
 
   return (
-    <View style={{ backgroundColor: '#333', width: '33.3%', height: 70 }}>
+    <View style={{ backgroundColor: '#333', width: '100%', height: '70%' }}>
       <Text style={{ color: 'white', padding: 16 }}>oi</Text>
       <StatusBar style="auto" />
     </View>
