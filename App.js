@@ -24,16 +24,20 @@ export default function App() {
 
   return (
     <View style={{
-      backgroundColor: 'tomato',
+      backgroundColor: '#eef',
       flex: 1,
       paddingTop: StatusBar.currentHeight,
       flexDirection: 'row',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      alignContent: 'center'
     }}>
-      <View style={{ backgroundColor: 'dodgerblue', width: 100, alignSelf: 'stretch' }} />
-      <View style={{ backgroundColor: 'gold', width: 100, height: 75 }} />
-      <View style={{ backgroundColor: 'green', width: 100, height: 50 }} />
+      <View style={{ backgroundColor: 'dodgerblue', height: 200, width: 300, flexShrink: 1 }} />
+      {/* <View style={{ backgroundColor: 'dodgerblue', height: 200, flexBasis: 100, flex: 1 }} /> */}
+      <View style={{ backgroundColor: 'gold', width: 100, height: 100 }} />
+      <View style={{ backgroundColor: 'green', width: 100, height: 100 }} />
+      <View style={{ backgroundColor: 'gray', width: 100, height: 100 }} />
     </View>
   )
 
