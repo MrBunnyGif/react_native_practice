@@ -23,11 +23,19 @@ export default function App() {
   const { landscape } = useDeviceOrientation()
 
   return (
-    <View style={{ backgroundColor: '#333', width: '100%', height: landscape ? '100%' : '30%' }}>
-      <Text style={{ color: 'white', padding: 16 }}>oi</Text>
-      <StatusBar style="auto" />
+    <View style={{ backgroundColor: 'tomato', flex: 1 }}>
+      <View style={{ backgroundColor: 'dodgerblue', flex: 8 }} />
+      <View style={{ backgroundColor: 'gold', flex: 1 }} />
+      <View style={{ backgroundColor: 'green', flex: 1 }} />
     </View>
   )
+
+  // return (
+  //   <View style={{ backgroundColor: '#333', width: '100%', height: landscape ? '100%' : '30%' }}>
+  //     <Text style={{ color: 'white', padding: 16 }}>oi</Text>
+  //     <StatusBar style="auto" />
+  //   </View>
+  // )
 
   // return (
   //   <SafeAreaView style={[styles.container, viewStyles.container]}>
